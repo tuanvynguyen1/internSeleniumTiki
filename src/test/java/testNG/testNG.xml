@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Tiki Automation">
+
+    <test name="test-login">
+        <classes>
+            <class name="login.LoginTests"></class>
+            <parameter name="username" value="0337276991"></parameter>
+            <parameter name="password" value="15022000Vy"></parameter>
+            <parameter name="wrongPassword" value="15022000"></parameter>
+        </classes>
+    </test>
+    <test name="test-search">
+        <classes>
+            <class name = "search.SearchTests" />
+            <parameter name="keyword" value="laptop"></parameter>
+        </classes>
+    </test>
+</suite>
