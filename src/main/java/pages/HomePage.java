@@ -24,6 +24,9 @@ public class HomePage {
         clickElement(accountButton);
         return new LoginPage(driver);
     }
+    public UserManagerPage hoverToUserManager(){
+        return new UserManagerPage(driver);
+    }
     public ResultsSearchPage Search(String text){
         text = Keys.chord(text, Keys.RETURN);
         driver.findElement(searchBox).sendKeys(text);

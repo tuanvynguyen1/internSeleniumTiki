@@ -17,4 +17,11 @@
             <parameter name="keyword" value="laptop"></parameter>
         </classes>
     </test>
+    <test name="test-hover">
+        <classes>
+            <class name="hover.HoverTests"></class>
+            <parameter name="username" value="0337276991"></parameter>
+            <parameter name="password" value="15022000Vy"></parameter>
+        </classes>
+    </test>
 </suite>
