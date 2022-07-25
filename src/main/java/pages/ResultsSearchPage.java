@@ -3,25 +3,20 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.regex.Matcher;
 
-import java.time.Duration;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+import utils.Wait;
 
 public class ResultsSearchPage {
     private WebDriver driver;
     private By productItems = By.xpath("//a[@class=\"product-item\"]");
+    private By searchLoc = By.xpath("//div[@class=\"search-summary\"]");
     private ArrayList<Product> products = new ArrayList<>();
     public ResultsSearchPage(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("sort-list")));
-
+        Wait.waitForElementAppear(driver, searchLoc);
+        Wait.waitForElementAppear(driver, productItems);
         this.driver = driver;
     }
     public int getNumProduct(){

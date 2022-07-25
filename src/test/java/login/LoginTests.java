@@ -1,6 +1,7 @@
 package login;
 
 import base.BaseTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -14,16 +15,12 @@ public class LoginTests extends BaseTest {
         loginPage.login(username, password);
         assertTrue(!loginPage.isLogin(),"Error may be occur! Check screenshots!");
     }
-    @Test
+    @Test(dataProvider = "getDataForTest")
     @Parameters({"username","password"})
     public void SuccessfulLoginTest(String username, String password){
         var loginPage = homePage.loginForm();
         loginPage.login(username, password);
         assertTrue(loginPage.isLogin(),"Login Failed! Check screenshots!");
     }
-    @Test
-    public void AddToCart(){
-        var resultsSearchPage = homePage.Search("Macbook");
 
-    }
 }

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class HomePage {
     private WebDriver driver;
-    private By searchBox = By.className("FormSearch__Input-sc-1fwg3wo-2");
+    private By searchBox = By.xpath("//input[@data-view-id=\"main_search_form_input\"]");
     private By accountButton = By.xpath("//div[@data-view-id=\"header_header_account_container\"]");
 
     public HomePage(WebDriver driver){

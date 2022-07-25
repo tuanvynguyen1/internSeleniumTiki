@@ -26,7 +26,7 @@ public class LoginPage {
 
     }
 
-    public void inputElement(By ele, String text){
+    private void inputElement(By ele, String text){
         text = Keys.chord(text+Keys.RETURN);
         driver.findElement(ele).sendKeys(text);
     }

@@ -1,0 +1,16 @@
+{
+  "Test-1": [
+    {
+      "username": "hacklamconcho",
+      "password": "nhincaigi"
+    }
+  ],
+  "search/SearchTests": [
+    {
+      "key": "laptop"
+    },
+    {
+      "key": "keychrone"
+    }
+  ]
+}
