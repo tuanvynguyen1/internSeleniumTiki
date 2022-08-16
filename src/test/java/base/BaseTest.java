@@ -1,5 +1,6 @@
 package base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,7 +21,7 @@ import java.util.*;
 
 public class BaseTest {
 
-    private WebDriver driver;
+    private ChromeDriver driver;
     protected HomePage homePage;
     protected String username;
     protected String password;
@@ -39,8 +40,9 @@ public class BaseTest {
     }
     @BeforeClass
     public void setUp(){
-        System.setProperty("web-driver.chrome.driver","resources/chromedriver");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.manage().window().maximize();
     }
 
