@@ -1,0 +1,35 @@
+{
+  "login/LoginTests": [
+    {
+      "username": "0337276991",
+      "password": "15022000Vy"
+    }
+  ],
+  "search/SearchTests": [
+    {
+      "key": "laptop"
+    },
+    {
+      "key": "keychrone"
+    }
+  ],
+  "buyitem/AddItemTest": [
+    {
+      "username": "0337276991",
+      "password": "15022000Vy",
+      "keyword": "Macbook"
+    }
+  ],
+  "buyitem/IncQuantity": [
+    {
+      "username": "0337276991",
+      "password": "15022000Vy"
+    }
+  ],
+  "buyitem/DetailItemTest": [
+    {
+      "username": "0337276991",
+      "password": "15022000Vy"
+    }
+  ]
+}

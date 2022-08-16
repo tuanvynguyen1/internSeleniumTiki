@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import pages.HomePage;
+import utils.Account;
 import utils.Data;
 
 import java.io.File;
@@ -21,6 +22,8 @@ public class BaseTest {
 
     private WebDriver driver;
     protected HomePage homePage;
+    protected String username;
+    protected String password;
     private String path;
     private int i = 1;
     @BeforeMethod
@@ -28,18 +31,23 @@ public class BaseTest {
         driver.get("https://tiki.vn/");
         homePage = new HomePage(driver);
     }
+    @BeforeSuite
+    public void setUpAccount(){
+        Account a = new Account();
+        username = a.getUsername();
+        password = a.getPassword();
+    }
     @BeforeClass
     public void setUp(){
         System.setProperty("web-driver.chrome.driver","resources/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-
     }
 
     @DataProvider(name="dp")
     public Object[][] getDataForTest(){
         try {
-            FileReader jsonFile = new FileReader(System.getProperty("user.dir") + "/src/test/java/test/data.json");
+            FileReader jsonFile = new FileReader(System.getProperty("user.dir") + "/src/test/java/resources/data.json");
 //            Data.getData(this.getClass().getName().replace(".","/"), jsonFile);
             return Data.getData(this.getClass().getName().replace(".","/"), jsonFile);
         }catch(FileNotFoundException fileNotFoundException){

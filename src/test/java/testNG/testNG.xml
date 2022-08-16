@@ -11,16 +11,15 @@
 <!--            <parameter name="wrongPassword" value="15022000"></parameter>-->
 <!--        </classes>-->
 <!--    </test>-->
-    <test name="test-search">
-        <classes>
-            <class name = "search.SearchTests" />
-        </classes>
-    </test>
-    <test name="test-hover">
-        <classes>
-            <class name="hover.HoverTests"></class>
-            <parameter name="username" value="0337276991"></parameter>
-            <parameter name="password" value="15022000Vy"></parameter>
+<!--    <test name="test-addItem">-->
+<!--        <classes>-->
+<!--            <class name = "buyitem.AddItemTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="test-Item">
+
+        <classes >
+            <class name="login.LoginTests"></class>
         </classes>
     </test>
 </suite>

@@ -27,7 +27,7 @@ public class ResultsSearchPage {
         Product p = new Product(driver.findElements(productItems).get(index));
         return p.getName();
     }
-    public boolean searchTest(String searchKeys){
+    public boolean isHaveKeyInName(String searchKeys){
 
         for (WebElement ele: driver.findElements(productItems)
              ) {
@@ -42,11 +42,11 @@ public class ResultsSearchPage {
         }
         return false;
     }
-    public void addToCart(){
-        for (WebElement ele: driver.findElements(productItems)
-        ) {
-            products.add(new Product(ele));
-        }
+
+    public DetailProductPage addToCart(int index){
+        Product p = new Product(driver.findElements(productItems).get(index));
+        p.buy();
+        return new DetailProductPage(driver);
     }
     public String getTitle(){
         return driver.getTitle();
@@ -69,6 +69,9 @@ public class ResultsSearchPage {
                 System.out.println(matcher.group().replace(".",""));
             }
             return "";
+        }
+        public void buy(){
+            element.click();
         }
     }
 }

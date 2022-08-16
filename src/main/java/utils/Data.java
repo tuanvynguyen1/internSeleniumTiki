@@ -11,41 +11,6 @@ import java.util.*;
 
 
 public class Data {
-    //    public static Object[] getData(String classname, FileReader JSONFile) throws IOException, ParseException {
-//        JSONParser parser = new JSONParser();
-//        JSONObject jsonObject = null;
-//        JSONObject jsonObject1 = null;
-//        // Read JSON file
-//        try {
-//            jsonObject = (JSONObject) parser.parse(new FileReader("src/test/java/test/data.json"));
-//            jsonObject1 = (JSONObject) jsonObject.get("Test-2");
-//        } catch (IOException | ParseException exception) {
-//            exception.printStackTrace();
-//        }
-//
-//        // Array to store JSON data
-//        Object[] data = new Object[1];
-//
-//        // Store JSON data as key/value pairs in a hashMap
-//        HashMap<String, String> hashMap = new LinkedHashMap<>();
-//        if (jsonObject != null) {
-//            Set<String> jsonObjKeys = jsonObject1.keySet();
-//            for (String jsonObjKey : jsonObjKeys) {
-//                hashMap.put(jsonObjKey, (String) jsonObject1.get(jsonObjKey));
-//                System.out.println(jsonObject1.get(jsonObjKey));
-//            }
-//        } else {
-//            System.out.println("Error retrieving JSON data");
-//            throw new RuntimeException();
-//        }
-//
-//        // Store HashMap in an array and return array
-//        data[0] = hashMap;
-//        System.out.println(data[0]);
-//        return data;
-//
-//    }
-
     /**
      * @param JSONArray
      * @return DataProvider

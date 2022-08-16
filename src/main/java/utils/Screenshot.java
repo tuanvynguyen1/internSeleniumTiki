@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class screenshot {
+public class Screenshot {
     public static void takeScreenshotsError(WebDriver driver) throws InterruptedException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
         String path = "";
