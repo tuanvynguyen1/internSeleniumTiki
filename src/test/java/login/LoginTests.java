@@ -26,7 +26,7 @@ public class LoginTests extends BaseTest {
     public void Login_should_fail_if_user_is_invalid() {
         var loginPage = homePage.loginForm();
         loginPage.login(username, password);
-        assertTrue(loginPage.isLogin(), "Login Failed! Check screenshots!");
+        assertTrue(loginPage.isLogin(), "Login Failed! Check screenshots! Run TEST!");
     }
 
 
