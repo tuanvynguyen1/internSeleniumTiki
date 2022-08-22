@@ -1,16 +1,16 @@
 package utils;
 
 public class Account {
-    private String username = "0337276991";
-    private String password = "15022000Vy";
+    public static String username = "0337276991";
+    public static String password = "15022000Vy";
 
     public Account(){
 
     }
-    public static String getUsername(){
+    public String getUsername(){
         return this.username;
     }
-    public static String getPassword(){
+    public String getPassword(){
         return this.password;
     }
 }

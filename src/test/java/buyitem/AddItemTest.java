@@ -2,6 +2,7 @@ package buyitem;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
+import utils.Account;
 
 import java.util.HashMap;
 
@@ -12,7 +13,7 @@ public class AddItemTest extends BaseTest {
     @Test(dataProvider = "dp", description = "Search one item then add it to cart")
     public void addItem(HashMap<String, String> hashMap){
         var loginPage = homePage.loginForm();
-        homePage = loginPage.login(utils.Account.getUsername(), utils.Account.getPassword());
+        homePage = loginPage.login(Account.username, Account.password);
         var search = homePage.Search(hashMap.get("keyword"));
         var DetailPage = search.addToCart(3);
         DetailPage.addToCart();
