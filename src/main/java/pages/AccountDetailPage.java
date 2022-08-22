@@ -10,6 +10,7 @@ public class AccountDetailPage {
         this.driver = driver;
     }
     public AccountAddressPage toAddressPage(){
+        utils.Wait.waitForElementAppear(driver, addresschange);
         driver.findElement(addresschange).click();
         return new AccountAddressPage(driver);
     }
