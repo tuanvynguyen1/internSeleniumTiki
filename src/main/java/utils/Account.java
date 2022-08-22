@@ -7,10 +7,10 @@ public class Account {
     public Account(){
 
     }
-    public String getUsername(){
+    public static String getUsername(){
         return this.username;
     }
-    public String getPassword(){
+    public static String getPassword(){
         return this.password;
     }
 }
