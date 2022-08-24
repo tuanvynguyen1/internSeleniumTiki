@@ -17,7 +17,7 @@ public class SearchTests extends BaseTest {
         var resultSearchPage =  homePage.Search(hashMap.get("key"));
         assertTrue(resultSearchPage.getNumProduct()!=0,"Product page not loaded!");
         assertTrue(resultSearchPage.isHaveKeyInName(hashMap.get("key")),"Search Engine has trouble");
-        assertTrue(resultSearchPage.getTitle().toLowerCase().contains(hashMap.get("key").toLowerCase() + " giá siêu tốt"),"Title incorrect");
+        assertTrue(resultSearchPage.getTitle().toLowerCase().contains(hashMap.get("key").toLowerCase() + " giá siêu tốt"),"Title incorrect!!!");
         System.out.println(resultSearchPage.getID());
     }
 }
